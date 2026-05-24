@@ -63,30 +63,7 @@ export class CoreLoginSiteHelpComponent {
                     format: AnswerFormat.SafeHTML,
                 },
             },
-            canScanQR && {
-                text: Translate.instant('core.login.faqwhereisqrcode'),
-                answer: {
-                    text: Translate.instant('core.login.faqwhereisqrcodeanswer', { $image: qrCodeImageHtml }),
-                    format: AnswerFormat.SafeHTML,
-                    class: 'core-login-faqwhereisqrcodeanswer',
-                },
-            },
-            {
-                text: Translate.instant('core.login.faqsetupsitequestion'),
-                answer: {
-                    text: Translate.instant('core.login.faqsetupsiteanswer', { $link: setupLinkHtml }),
-                    format: AnswerFormat.UnsafeHTML,
-                },
-            },
-            {
-                text: Translate.instant('core.login.faqtestappquestion'),
-                answer: {
-                    text: Translate.instant('core.login.faqtestappanswer'),
-                    format: AnswerFormat.SafeHTML,
-                },
-            },
         ];
-
         for (const question of questions) {
             if (!question) {
                 continue;
